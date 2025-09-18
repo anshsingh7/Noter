@@ -1,0 +1,34 @@
+{
+    "notes": [
+        {
+            "id": 1,
+            "title": "Meeting Notes",
+            "discription": "Discuss project milestones and deadlines.",
+            "date": "2024-10-01",
+            "tag": []
+        },
+        {
+            "id": 2,
+            "title": "Grocery List",
+            "discription": "Milk, Bread, Eggs, Butter, Fruits.",
+            "date": "2024-10-02",
+            "tag": []
+        }
+    ],
+    "tasks": [
+        {
+            "id": 1,
+            "task": "Finish React project",
+            "priority": "Finish React project",
+            "completed": false,
+            "deadline": "2024-10-05"
+        },
+        {
+            "id": 2,
+            "task": "Finish React project",
+            "priority": "Finish React project",
+            "completed": false,
+            "deadline": "2024-10-05"
+        }
+    ]
+}
