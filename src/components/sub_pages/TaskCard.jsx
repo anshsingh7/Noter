@@ -1,5 +1,3 @@
-import React from "react";
-
 function TaskCard({ tasks, onDelete }) {
   return (
     tasks.map((task)=><div key={task.id} className="bg-white rounded-xl shadow p-4">
@@ -23,4 +21,3 @@ function TaskCard({ tasks, onDelete }) {
 }
 
 export default TaskCard;
-

@@ -1,10 +1,10 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import Sidebar from "../Sidebar";
-import Topbar from "../Topbar";
+import Sidebar from "../dashboard/Sidebar";
+import Topbar from "../dashboard/Topbar";
 import { Plus } from "lucide-react";
-import CardContainer from "../CardContainer";
-import NoteModal from "./sub_pages/NoteModel";
+import CardContainer from "../sub_pages/CardContainer";
+import NoteModal from "../sub_pages/NoteModel";
 import { addNote } from "../../redux/reduce/noteSlice";
 
 const NotesPage = () => {

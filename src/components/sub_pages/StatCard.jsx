@@ -1,4 +1,3 @@
-import React from "react";
 import { FileText, ListChecks, TrendingUp } from "lucide-react";
 
 const iconMap = {

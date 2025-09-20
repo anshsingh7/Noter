@@ -1,6 +1,4 @@
-// src/components/CardContainer.jsx
-import React from "react";
-import Card from "./pages/sub_pages/card";
+import Card from "./card";
 
 const CardContainer = ({ items = [], type = "notes" }) => {
   return (

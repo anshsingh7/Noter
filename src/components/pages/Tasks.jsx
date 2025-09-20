@@ -1,12 +1,12 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import Sidebar from "../Sidebar";
-import Topbar from "../Topbar";
+import Sidebar from "../dashboard/Sidebar";
+import Topbar from "../dashboard/Topbar";
 import { Plus } from "lucide-react";
-import CardContainer from "../CardContainer";
-import TaskModal from "./sub_pages/TaskModal";
+import CardContainer from "../sub_pages/CardContainer";
+import TaskModal from "../sub_pages/TaskModal";
 import { addTask,deleteTask } from "../../redux/reduce/taskSlice";
-import TaskCard from "../TaskCard";
+import TaskCard from "../sub_pages/TaskCard";
 
 const TaskPage = () => {
   const dispatch = useDispatch();
@@ -79,4 +79,3 @@ const TaskPage = () => {
 };
 
 export default TaskPage;
-

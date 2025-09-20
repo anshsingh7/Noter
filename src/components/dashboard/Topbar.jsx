@@ -1,9 +1,9 @@
-import React from "react";
 import { Search } from "lucide-react";
 
 const Topbar = () => {
   return (
     <header className="w-full h-16 bg-white border-b shadow-sm flex items-center justify-between px-6">
+      
       {/* Search Bar */}
       <div className="relative w-1/3">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 h-5 w-5" />

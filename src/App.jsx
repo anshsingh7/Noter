@@ -1,9 +1,10 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
-import Home from "./components/pages/Home";
-import Dashboard from "./components/pages/Dashboard";
-import Tasks from "./components/pages/Tasks";
+import Home from "./components/home/Home";
+import Dashboard from "./components/dashboard/DashboardLayout";
 import NotesPage from "./components/pages/Notes";
-import NewNotePage from "./components/pages/sub_pages/AddNotes";
+import Tasks from "./components/pages/Tasks";
+import SetingsPage from "./components/pages/settings/SettingsPage";
+import NewNotePage from "./components/sub_pages/AddNotes";
 import { Navigate } from "react-router-dom";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
         <Route path="/notes" element={<NotesPage />} />
         <Route path="/notes/new" element={<NewNotePage />} />
         <Route path="/tasks" element={<Tasks />} />
+        <Route path="/settings" element={<SetingsPage />} />
         <Route path="*" element={<Navigate to="/" />} />
       </Routes>
     </Router>

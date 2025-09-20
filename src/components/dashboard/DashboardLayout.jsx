@@ -1,8 +1,8 @@
-import Sidebar from "../Sidebar";
-import Topbar from "../Topbar";
-import StatCard from "../StatCard";
-import NoteCard from "../NoteCard";
-import TaskCard from "../TaskCard";
+import Sidebar from "./Sidebar";
+import Topbar from "./Topbar";
+import StatCard from "../sub_pages/StatCard";
+import NoteCard from "../sub_pages/NoteCard";
+import TaskCard from "../sub_pages/TaskCard";
 import { useDispatch, useSelector } from "react-redux";
 import { deleteTask } from "../../redux/reduce/taskSlice";
 
