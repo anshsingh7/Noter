@@ -1,9 +1,8 @@
-// src/pages/NewNote.jsx
-import React, { useContext } from "react";
+import { useContext } from "react";
 import { useNavigate } from "react-router-dom";
-import NoteModal from "./NoteModel.jsx";
+import NoteModal from "../../../modal/NoteModal";
 
-const addNewNotesPage = () => {
+const AddNewNotesPage = () => {
   const { notes, addNote } = useContext(NotesContext);
   const navigate = useNavigate();
 
@@ -26,4 +25,4 @@ const addNewNotesPage = () => {
   );
 };
 
-export default addNewNotesPage;
+export default AddNewNotesPage;

@@ -1,5 +1,4 @@
-// src/components/NoteModal.jsx
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 
 const NoteModal = ({ initial = {}, onClose, onSubmit }) => {
   const [title, setTitle] = useState(initial.title || "");
@@ -33,24 +32,21 @@ const NoteModal = ({ initial = {}, onClose, onSubmit }) => {
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center px-4">
       {/* Backdrop */}
-      <div
-        className="absolute inset-0 bg-black/40 backdrop-blur-sm"
-        onClick={onClose}
-      />
+      <div className="absolute inset-0 bg-black/40 backdrop-blur-sm"
+           onClick={onClose}/>
 
-      {/* Modal */}
-      <div className="relative w-full max-w-2xl bg-white rounded-xl shadow-2xl overflow-hidden">
-        {/* Header */}
-        <div className="flex items-center justify-between p-6 border-b">
-          <h3 className="text-lg font-semibold">Create New Note</h3>
-          <button
+        {/* Modal */}
+        <div className="relative w-full max-w-2xl bg-white rounded-xl shadow-2xl overflow-hidden">
+          {/* Header */}
+          <div className="flex items-center justify-between p-6 border-b">
+            <h3 className="text-lg font-semibold">Create New Note</h3>
+            <button
             aria-label="Close"
             onClick={onClose}
-            className="text-gray-500 hover:text-gray-700"
-          >
+            className="text-gray-500 hover:text-gray-700">
             ✕
-          </button>
-        </div>
+            </button>
+          </div>
 
         {/* Form */}
         <form onSubmit={handleSubmit}>
@@ -61,8 +57,7 @@ const NoteModal = ({ initial = {}, onClose, onSubmit }) => {
                 value={title}
                 onChange={(e) => setTitle(e.target.value)}
                 placeholder="Enter note title..."
-                className="w-full rounded-lg border-2 border-transparent focus:border-purple-500 focus:ring-2 focus:ring-purple-200 px-4 py-3 outline-none transition"
-              />
+                className="w-full rounded-lg border-2 border-transparent focus:border-purple-500 focus:ring-2 focus:ring-purple-200 px-4 py-3 outline-none transition"/>
             </label>
 
             <label className="block">
@@ -72,8 +67,7 @@ const NoteModal = ({ initial = {}, onClose, onSubmit }) => {
                 onChange={(e) => setContent(e.target.value)}
                 placeholder="Write your note content..."
                 rows={8}
-                className="w-full rounded-lg border border-gray-200 px-4 py-3 resize-y focus:outline-none focus:ring-2 focus:ring-purple-200"
-              />
+                className="w-full rounded-lg border border-gray-200 px-4 py-3 resize-y focus:outline-none focus:ring-2 focus:ring-purple-200"/>
             </label>
 
             <label className="block">
@@ -82,8 +76,7 @@ const NoteModal = ({ initial = {}, onClose, onSubmit }) => {
                 value={tags}
                 onChange={(e) => setTags(e.target.value)}
                 placeholder="project, ideas, important..."
-                className="w-full rounded-lg border border-gray-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-200"
-              />
+                className="w-full rounded-lg border border-gray-200 px-4 py-3 focus:outline-none focus:ring-2 focus:ring-purple-200"/>
             </label>
           </div>
 
@@ -92,14 +85,12 @@ const NoteModal = ({ initial = {}, onClose, onSubmit }) => {
             <button
               type="button"
               onClick={onClose}
-              className="px-4 py-2 rounded-lg bg-white border text-sm text-gray-700 hover:bg-gray-50"
-            >
+              className="px-4 py-2 rounded-lg bg-white border text-sm text-gray-700 hover:bg-gray-50">
               Cancel
             </button>
             <button
               type="submit"
-              className="px-4 py-2 rounded-lg bg-purple-600 text-white hover:bg-purple-700 text-sm"
-            >
+              className="px-4 py-2 rounded-lg bg-purple-600 text-white hover:bg-purple-700 text-sm">
               Create Note
             </button>
           </div>

@@ -1,4 +1,4 @@
-import Card from "./card";
+import Card from "./Card";
 
 const CardContainer = ({ items = [], type = "notes" }) => {
   return (

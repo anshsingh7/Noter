@@ -13,7 +13,7 @@ function Home() {
         Your Ideas,
       </h1>
       <h1 className="text-5xl sm:text-6xl font-bold leading-tight max-w-3xl">
-        <span className="text-purple-600">Organized & Enhanced</span>
+        <span className="bg-gradient-to-br from-indigo-600 to-purple-500 bg-clip-text text-transparent">Organized & Enhanced</span>
       </h1>
       <h1 className="text-5xl sm:text-6xl font-bold leading-tight max-w-3xl">
         by Noter
@@ -22,10 +22,10 @@ function Home() {
         The modern workspace that learns from you. Take notes, manage tasks,
         and let AI help you stay productive.
       </p>
-
+      
       {/* Buttons */}
       <div className="mt-6 flex gap-4">
-        <Link to="/dashboard" className="bg-purple-600 hover:bg-purple-700 text-white px-6 py-3 rounded-lg shadow-md transition">
+        <Link to="/dashboard" className="bg-gradient-to-r from-indigo-600 to-purple-400 text-white px-6 py-3 rounded-lg shadow-md transition transform hover:scale-105">
           Get Started →
         </Link>
         {/* <button className="border border-gray-300 hover:bg-gray-100 px-6 py-3 rounded-lg shadow-md transition">
@@ -36,7 +36,7 @@ function Home() {
       {/* Features Section */}
       <div className="mt-16 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl w-full">
         <div className="bg-white rounded-2xl shadow-md p-6 text-center">
-          <div className="text-purple-600 text-4xl mb-4">📄</div>
+          <div className="text-4xl mb-4">📝</div>
           <h3 className="text-xl font-semibold">Smart Notes</h3>
           <p className="text-gray-600 mt-2 text-sm">
             Rich text editing with AI-powered organization
@@ -44,7 +44,7 @@ function Home() {
         </div>
 
         <div className="bg-white rounded-2xl shadow-md p-6 text-center">
-          <div className="text-purple-600 text-4xl mb-4">✨</div>
+          <div className="text-4xl mb-4">📋</div>
           <h3 className="text-xl font-semibold">Task Management</h3>
           <p className="text-gray-600 mt-2 text-sm">
             Kanban boards that adapt to your workflow
@@ -52,7 +52,7 @@ function Home() {
         </div>
 
         <div className="bg-white rounded-2xl shadow-md p-6 text-center">
-          <div className="text-purple-600 text-4xl mb-4">🧠</div>
+          <div className="text-4xl mb-4">✨</div>
           <h3 className="text-xl font-semibold">AI Assistant</h3>
           <p className="text-gray-600 mt-2 text-sm">
             Get suggestions and insights on your content

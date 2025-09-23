@@ -1,6 +1,3 @@
-// src/components/Card.jsx
-import React from "react";
-
 const Card = ({ item, type = "notes" }) => {
   return (
     <div className="bg-white rounded-xl shadow-md p-6 hover:shadow-lg transition flex flex-col h-full">

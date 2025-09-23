@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 
-const TaskModal = ({ onClose, onSubmit }) => {
+function AddTasks({ onClose, onSave }) {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [priority, setPriority] = useState("medium");
@@ -11,12 +11,18 @@ const TaskModal = ({ onClose, onSubmit }) => {
     e.preventDefault();
     if (!title.trim()) return;
 
-    onSubmit({ title, description, priority, deadline, status });
+    onSave({
+      title,
+      description,
+      priority,
+      deadline,
+      status,
+    });
   };
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center">
-      {/* Overlay */}
+      {/* Backdrop */}
       <div
         className="absolute inset-0 bg-black/40"
         onClick={onClose}
@@ -26,7 +32,6 @@ const TaskModal = ({ onClose, onSubmit }) => {
       <div className="relative bg-white rounded-xl shadow-lg w-full max-w-lg p-6">
         <h2 className="text-xl font-semibold mb-4">Add New Task</h2>
         <form onSubmit={handleSubmit} className="space-y-4">
-          {/* Title */}
           <div>
             <label className="block text-sm mb-1">Title</label>
             <input
@@ -38,7 +43,6 @@ const TaskModal = ({ onClose, onSubmit }) => {
             />
           </div>
 
-          {/* Description */}
           <div>
             <label className="block text-sm mb-1">Description</label>
             <textarea
@@ -49,7 +53,6 @@ const TaskModal = ({ onClose, onSubmit }) => {
             />
           </div>
 
-          {/* Priority + Deadline */}
           <div className="grid grid-cols-2 gap-4">
             <div>
               <label className="block text-sm mb-1">Priority</label>
@@ -63,6 +66,7 @@ const TaskModal = ({ onClose, onSubmit }) => {
                 <option value="high">High</option>
               </select>
             </div>
+
             <div>
               <label className="block text-sm mb-1">Deadline</label>
               <input
@@ -74,7 +78,6 @@ const TaskModal = ({ onClose, onSubmit }) => {
             </div>
           </div>
 
-          {/* Status */}
           <div>
             <label className="block text-sm mb-1">Status</label>
             <select
@@ -88,7 +91,6 @@ const TaskModal = ({ onClose, onSubmit }) => {
             </select>
           </div>
 
-          {/* Footer */}
           <div className="flex justify-end gap-3 mt-6">
             <button
               type="button"
@@ -108,6 +110,6 @@ const TaskModal = ({ onClose, onSubmit }) => {
       </div>
     </div>
   );
-};
+}
 
-export default TaskModal;
+export default AddTasks;

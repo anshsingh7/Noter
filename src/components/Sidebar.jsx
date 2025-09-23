@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { LayoutDashboard, NotepadText, ListTodo, Settings, PanelLeftClose, PanelLeftOpen,} from "lucide-react";
 import { NavLink } from "react-router-dom";
-import logo from "../../assets/logo3.png";
+import logo from "../assets/newlogo.png";
 
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(false);
@@ -9,18 +9,18 @@ const Sidebar = () => {
   const linkClasses =
     "flex items-center gap-3 px-3 py-2 rounded-lg transition";
   const inactiveClasses =
-    "text-gray-700 hover:bg-purple-50 hover:text-purple-600";
-  const activeClasses = "bg-purple-50 text-purple-600 font-medium";
+    "text-gray-700 hover:bg-indigo-50 hover:text-indigo-500";
+  const activeClasses = "bg-indigo-50 text-indigo-500 font-medium";
 
   return (
     <aside
-      className={`${ collapsed ? "w-20" : "w-64"} min-h-screen bg-white border-r shadow-sm flex flex-col transition-all duration-300`}>
+      className={`${ collapsed ? "w-20" : "w-64"} min-h-screen bg-gray-50 border-r shadow-sm flex flex-col transition-all duration-300`}>
 
       {/* Logo */}
       <div className="h-16 border-b flex items-center px-4 gap-3">
         <NavLink to={"/"} className="flex items-center gap-2">
           <img className="h-10 w-10" src={logo} alt="Logo" />
-          {!collapsed && (<h1 className="text-xl font-bold text-purple-600">NOTER AI</h1>)}
+          {!collapsed && (<h1 className="text-xl font-bold text-zinc-700">NOTER AI</h1>)}
         </NavLink>
       </div>
 
@@ -63,7 +63,7 @@ const Sidebar = () => {
       <div className="p-4 border-t">
         <button
           onClick={() => setCollapsed(!collapsed)}
-          className="flex items-center justify-center gap-3 px-3 py-2 w-full rounded-lg text-gray-600 hover:bg-purple-50 hover:text-purple-600 transition">
+          className="flex items-center justify-center gap-3 px-3 py-2 w-full rounded-lg text-gray-600 hover:bg-indigo-50 hover:text-indigo-500 transition">
           {collapsed ? (
             <PanelLeftOpen className="h-5 w-5" />
           ) : (

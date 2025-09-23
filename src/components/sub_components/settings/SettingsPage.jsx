@@ -4,20 +4,11 @@ import AIFeatures from "./AIFeatures";
 import PrivacySecurity from "./PrivacySecurity";
 import DataManagement from "./DataManagement";
 
-import Sidebar from "../../dashboard/Sidebar";
-import Topbar from "../../dashboard/Topbar";
+import Layout from "../../layout/MainLayout";
 
 export default function SettingsPage() {
   return (
-    <div className="flex">
-      {/* Sidebar */}
-      <Sidebar />
-
-      {/* Main Content */}
-      <div className="flex-1 flex flex-col min-h-screen">
-        <Topbar />
-
-        <main className="flex-1 p-6 bg-gray-50">
+    <Layout meta={{title:"Settings - NOTER AI", description:"", keywords: ["settings, preferences, customization"]}}>
           <h1 className="text-2xl font-bold">Settings</h1>
           <p className="text-gray-600 mb-6">
             Customize your AI Notes experience
@@ -35,8 +26,6 @@ export default function SettingsPage() {
           <div className="mt-6">
             <DataManagement />
           </div>
-        </main>
-      </div>
-    </div>
+       </Layout>
   );
 }

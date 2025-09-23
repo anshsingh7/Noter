@@ -1,12 +1,10 @@
 import { useState } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import Sidebar from "../dashboard/Sidebar";
-import Topbar from "../dashboard/Topbar";
 import { Plus } from "lucide-react";
-import CardContainer from "../sub_pages/CardContainer";
-import TaskModal from "../sub_pages/TaskModal";
-import { addTask,deleteTask } from "../../redux/reduce/taskSlice";
-import TaskCard from "../sub_pages/TaskCard";
+import TaskCard from "../dashboard/TaskCard";
+import { addTask, deleteTask } from "../../../redux/reduce/taskSlice";
+import Layout from "../../layout/MainLayout";
+import TaskModal from "../../modal/TaskModal";
 
 const TaskPage = () => {
   const dispatch = useDispatch();
@@ -36,20 +34,15 @@ const TaskPage = () => {
   };
 
   return (
-    <div className="flex h-screen">
-      <Sidebar />
-
-      <div className="flex flex-col flex-1">
-        <Topbar />
-
-        <div className="p-6 bg-gray-50">
+    
+      <Layout meta={{title:"Tasks - NOTER AI", description:"", keywords: ["tasks, to-dos, productivity"]}}>
           <div className="flex justify-between items-center mb-6">
             <div>
               <h1 className="text-2xl font-bold">Tasks</h1>
-              <p className="text-gray-500">Manage your daily to-dos</p>
+              <p className="text-gray-500">Manage your workflow with Kanban boards</p>
             </div>
             <button
-              className="flex items-center gap-2 bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg shadow"
+              className="flex items-center gap-2 bg-gradient-to-r from-indigo-600 to-purple-400 text-white px-4 py-2 rounded-lg shadow"
               onClick={() => setIsModalOpen(true)}
             >
               <Plus size={18} /> New Task
@@ -65,16 +58,13 @@ const TaskPage = () => {
           />
 
           <TaskCard tasks={filteredTasks} onDelete={handleDeleteTask}/>
-        </div>
-      </div>
-
-      {isModalOpen && (
-        <TaskModal
-          onClose={() => setIsModalOpen(false)}
-          onSubmit={handleAddTask}
-        />
-      )}
-    </div>
+          {isModalOpen && (
+            <TaskModal
+              onClose={() => setIsModalOpen(false)}
+              onSubmit={handleAddTask}
+            />
+          )}
+        </Layout>
   );
 };
 
