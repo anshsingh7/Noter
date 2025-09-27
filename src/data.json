@@ -1,34 +1,47 @@
 {
     "notes": [
         {
-            "id": 1,
-            "title": "Meeting Notes",
-            "discription": "Discuss project milestones and deadlines.",
-            "date": "2024-10-01",
-            "tag": []
+            "id": "1",
+            "title": "Project Ideas",
+            "description": "1. AI-powered note-taking app\n2. Smart task manager\n3. Personal knowledge base\n\nFocus on user experience and clean design.",
+            "date": "2024-10-02",
+            "tags": [ "project","ideas", "development"]
         },
         {
-            "id": 2,
-            "title": "Grocery List",
-            "discription": "Milk, Bread, Eggs, Butter, Fruits.",
+            "id": "2",
+            "title": "Meeting Notes - Q4 Review",
+            "description": "Discussed quarterly goals and performance metrics. Key takeaways:\n- Revenue increased by 25%\n- User engagement up 40%\n- Need to focus on mobile optimization",
             "date": "2024-10-02",
-            "tag": []
+            "tags": ["meeting","quarterly","business"]
         }
     ],
     "tasks": [
         {
-            "id": 1,
-            "task": "Finish React project",
-            "priority": "Finish React project",
+            "id": "1",
+            "task": "Design System Update",
+            "description": "Update the design system with new color palette and typography",
+            "status": "progress",
+            "priority": "high",
             "completed": false,
             "deadline": "2024-10-05"
         },
         {
             "id": 2,
-            "task": "Finish React project",
-            "priority": "Finish React project",
+            "task": "User Research",
+            "description": "Conduct interviews with 5 users about the new features",
+            "status": "todo",
+            "priority": "medium",
             "completed": false,
             "deadline": "2024-10-05"
+        },
+        {
+            "id": 3,
+            "task": "Prepare Presentation",
+            "description": "Create slides for the upcoming tech conference",
+            "status": "todo",
+            "priority": "low",
+            "completed": false,
+            "deadline": "2024-10-10"
         }
     ]
 }

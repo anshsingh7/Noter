@@ -1,5 +1,3 @@
-import React from "react";
-
 const NoteCard = ({ title, description, tags = [], onEdit, onDelete }) => {
   return (
     <div className="p-4 border rounded-lg hover:shadow-md transition bg-white">

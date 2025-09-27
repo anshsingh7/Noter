@@ -25,6 +25,7 @@ const TaskPage = () => {
   );
 
   const handleAddTask = (task) => {
+    console.log("Adding Task:", task);
     dispatch(addTask(task)); // ✅ Update redux store
     setIsModalOpen(false);
   };

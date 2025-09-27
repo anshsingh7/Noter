@@ -1,7 +1,6 @@
 import { createSlice } from "@reduxjs/toolkit";
-import data from "../../data.json"; // adjust path as needed
+import data from "../../data.json"; 
 
-// Load from localStorage if exists, else fallback to data.json
 const initialState = {
   notes: JSON.parse(localStorage.getItem("notes")) || data.notes,
 };
@@ -17,7 +16,6 @@ const notesSlice = createSlice({
       };
       state.notes.unshift(newNote);
 
-      // persist to localStorage
       localStorage.setItem("notes", JSON.stringify(state.notes));
     },
     deleteNote: (state, action) => {
@@ -27,7 +25,6 @@ const notesSlice = createSlice({
       };
       state.notes.unshift(newNote);
 
-      // persist to localStorage
       localStorage.setItem("notes", JSON.stringify(state.notes));
     },
   },

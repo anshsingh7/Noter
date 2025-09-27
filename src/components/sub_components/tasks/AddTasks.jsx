@@ -12,7 +12,7 @@ function AddTasks({ onClose, onSave }) {
     if (!title.trim()) return;
 
     onSave({
-      title,
+      task: title,
       description,
       priority,
       deadline,
