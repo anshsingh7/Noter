@@ -6,32 +6,32 @@ function getPriorityColor(priority) {
 
 function TaskCard({ tasks, onComplete }) {
   return (
-    <div className="space-y-3">
+    <div className="space-y-3 ">
        {tasks.map((task) => (
         <div key={task.id}
-            className="flex items-center justify-between px-4 py-3 bg-gray-50 rounded-lg transition hover:bg-gray-100">
+            className="flex items-center justify-between px-4 py-3 border rounded-lg hover:shadow-md transition bg-white">
 
           <div className="flex items-center gap-2">
             <input
-              type="checkbox"
-              checked={task.status === "completed"}
-              onChange={() => onComplete(task.id)}
-              className="accent-purple-600 w-4 h-4 mr-3"
-            />
-            <span className={`font-medium ${task.status === "completed" ? "text-gray-400 line-through" : "text-gray-900"}`}>
-              {task.task}
-            </span>
-          </div>
-          <div className="flex items-center gap-3">
-            <span className={`text-xs px-3 py-1 rounded-full font-semibold capitalize ${getPriorityColor(task.priority)}`}>
-              {task.priority}
-            </span>
-            <span className="text-xs text-gray-500">{task.deadline}</span>
-          </div>
-        </div>
-      ))}
-    </div>
-  );
+              type="checkbox"
+              checked={task.status === "completed"}
+              onChange={() => onComplete(task.id)}
+              className="accent-purple-600 w-4 h-4 mr-3"
+            />
+            <span className={`font-medium ${task.status === "completed" ? "text-gray-400 line-through" : "text-gray-900"}`}>
+              {task.task}
+            </span>
+          </div>
+          <div className="flex items-center gap-3">
+            <span className={`text-xs px-3 py-1 rounded-full font-semibold capitalize ${getPriorityColor(task.priority)}`}>
+              {task.priority}
+            </span>
+            <span className="text-xs text-gray-500">{task.deadline}</span>
+          </div>
+        </div>
+      ))}
+    </div>
+  );
 }
 
 export default TaskCard;

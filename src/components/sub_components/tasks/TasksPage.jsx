@@ -13,7 +13,7 @@ const TaskPage = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
 
-  console.log("Tasks from Redux:", searchQuery);
+  // console.log("Tasks from Redux:", searchQuery);
 
   const filteredTasks = tasks.filter(
     (task) =>
